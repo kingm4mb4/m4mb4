@@ -8,7 +8,6 @@ body {
     color: #fff;
     font-family: Arial, sans-serif;
     text-align: center;
-    overflow: hidden;
 }
 
 main {
@@ -16,7 +15,7 @@ main {
 }
 
 h1 {
-    font-size: clamp(50px, 10vw, 80px);
+    font-size: 80px;
     margin: 0;
     letter-spacing: 8px;
 }
@@ -26,69 +25,40 @@ p {
 }
 
 .links {
-    margin-top: 35px;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+    margin-top: 30px;
 }
 
-.links a {
+.links button {
+    background: none;
+    border: none;
     color: #fff;
-    text-decoration: none;
     font-size: 12px;
     letter-spacing: 3px;
-}
-
-.links a:hover {
-    opacity: 0.5;
-}
-
-/* FULL-SCREEN OVERLAY */
-
-.overlay {
-    position: fixed;
-    inset: 0;
-    background: #000;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    overflow-y: auto;
-}
-
-.overlay:target {
-    display: flex;
-}
-
-/* CLOSE BUTTON */
-
-.close {
-    position: absolute;
-    top: 25px;
-    right: 30px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 30px;
-    line-height: 1;
     cursor: pointer;
 }
 
-.close:hover {
+.links button:hover {
     opacity: 0.5;
 }
 
-/* MUSIC */
+/* MERCH WINDOW */
 
-.content h2 {
-    font-size: 18px;
-    letter-spacing: 6px;
+.merch {
+    position: fixed;
+    inset: 0;
+    background: #000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 100;
 }
 
-.content p {
-    font-size: 12px;
-    color: #888;
+.merch.active {
+    display: flex;
 }
-
-/* MERCH */
 
 .product {
     width: min(80vw, 400px);
@@ -111,17 +81,31 @@ p {
     color: #888;
 }
 
-.product button {
-    margin-top: 15px;
-    padding: 12px 25px;
-    background: #fff;
+.close {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+
+    background: none;
     border: none;
-    color: #000;
-    letter-spacing: 2px;
-    font-size: 11px;
+
+    color: #fff;
+    font-size: 32px;
     cursor: pointer;
 }
 
-.product button:hover {
-    background: #ccc;
+.close:hover {
+    opacity: 0.5;
+}
+
+.coming-soon {
+    margin-top: 15px;
+    padding: 12px 25px;
+
+    background: #fff;
+    border: none;
+
+    color: #000;
+    font-size: 11px;
+    letter-spacing: 2px;
 }

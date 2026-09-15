@@ -11,28 +11,17 @@
 
     <main>
         <h1>M4MB4</h1>
+
         <p>NEW MUSIC. NEW SHOW. NEW ERA.</p>
 
         <div class="links">
-            <a href="#music">MUSIC</a>
-            <a href="#merch">MERCH</a>
-            <a href="mailto:booking@m4mb4.com">BOOKING</a>
+            <button onclick="openMerch()">MERCH</button>
         </div>
     </main>
 
-    <!-- MUSIC -->
-    <section id="music" class="overlay">
-        <a href="#" class="close">×</a>
-
-        <div class="content">
-            <h2>MUSIC</h2>
-            <p>NEW MUSIC COMING SOON.</p>
-        </div>
-    </section>
-
-    <!-- MERCH -->
-    <section id="merch" class="overlay">
-        <a href="#" class="close">×</a>
+    <div id="merch" class="merch">
+        
+        <button class="close" onclick="closeMerch()">×</button>
 
         <div class="product">
             <img
@@ -43,9 +32,20 @@
             <h2>M4MB4 HOODIE</h2>
             <p>BLACK / WHITE</p>
 
-            <button>COMING SOON</button>
+            <button class="coming-soon">COMING SOON</button>
         </div>
-    </section>
+
+    </div>
+
+    <script>
+        function openMerch() {
+            document.getElementById("merch").classList.add("active");
+        }
+
+        function closeMerch() {
+            document.getElementById("merch").classList.remove("active");
+        }
+    </script>
 
 </body>
 </html>
