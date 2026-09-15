@@ -12,100 +12,25 @@ body {
 
 main {
     width: 100%;
+    max-width: 900px;
+    padding: 40px 20px;
+    box-sizing: border-box;
 }
 
 h1 {
-    font-size: 80px;
+    font-size: clamp(50px, 10vw, 80px);
     margin: 0;
     letter-spacing: 8px;
 }
 
 p {
+    margin: 15px 0 0;
     letter-spacing: 3px;
 }
 
-.links {
-    margin-top: 30px;
-}
-
-.links button {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 12px;
-    letter-spacing: 3px;
-    cursor: pointer;
-}
-
-.links button:hover {
-    opacity: 0.5;
-}
-
-/* MERCH WINDOW */
-
-.merch {
-    position: fixed;
-    inset: 0;
-    background: #000;
-
-    display: none;
-
-    align-items: center;
-    justify-content: center;
-
-    z-index: 100;
-}
-
-.merch.active {
-    display: flex;
-}
-
-.product {
-    width: min(80vw, 400px);
-}
-
-.product img {
-    width: 100%;
-    height: auto;
+.hoodie {
     display: block;
-}
-
-.product h2 {
-    font-size: 16px;
-    letter-spacing: 4px;
-    margin: 25px 0 10px;
-}
-
-.product p {
-    font-size: 11px;
-    color: #888;
-}
-
-.close {
-    position: absolute;
-    top: 25px;
-    right: 30px;
-
-    background: none;
-    border: none;
-
-    color: #fff;
-    font-size: 32px;
-    cursor: pointer;
-}
-
-.close:hover {
-    opacity: 0.5;
-}
-
-.coming-soon {
-    margin-top: 15px;
-    padding: 12px 25px;
-
-    background: #fff;
-    border: none;
-
-    color: #000;
-    font-size: 11px;
-    letter-spacing: 2px;
+    width: min(70vw, 420px);
+    height: auto;
+    margin: 40px auto 0;
 }
