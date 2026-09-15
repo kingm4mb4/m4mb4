@@ -43,9 +43,9 @@ p {
     opacity: 0.5;
 }
 
-/* MERCH WINDOW */
+/* FULL-SCREEN OVERLAY */
 
-.merch {
+.overlay {
     position: fixed;
     inset: 0;
     background: #000;
@@ -55,9 +55,40 @@ p {
     overflow-y: auto;
 }
 
-.merch:target {
+.overlay:target {
     display: flex;
 }
+
+/* CLOSE BUTTON */
+
+.close {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.close:hover {
+    opacity: 0.5;
+}
+
+/* MUSIC */
+
+.content h2 {
+    font-size: 18px;
+    letter-spacing: 6px;
+}
+
+.content p {
+    font-size: 12px;
+    color: #888;
+}
+
+/* MERCH */
 
 .product {
     width: min(80vw, 400px);
@@ -80,23 +111,17 @@ p {
     color: #888;
 }
 
-.buy {
+.product button {
     margin-top: 15px;
     padding: 12px 25px;
     background: #fff;
-    border: 0;
+    border: none;
     color: #000;
     letter-spacing: 2px;
     font-size: 11px;
+    cursor: pointer;
 }
 
-.close {
-    position: absolute;
-    top: 25px;
-    right: 30px;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 30px;
-    cursor: pointer;
+.product button:hover {
+    background: #ccc;
 }
