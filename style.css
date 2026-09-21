@@ -1,3 +1,7 @@
+/* =========================
+   RESET
+   ========================= */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,13 +17,18 @@ body {
 body {
     background: #000;
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
     overflow-x: hidden;
 }
 
 
 /* =========================
-   MAIN GRID
+   MAIN SITE GRID
    ========================= */
 
 .site-grid {
@@ -29,13 +38,17 @@ body {
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-columns: repeat(6, 1fr);
+
+    grid-template-rows:
+        auto
+        minmax(400px, 1fr)
+        auto;
 
     grid-template-areas:
-        "header header header"
-        "scene  scene  scene"
-        "merch  merch  merch";
+        "header header header header header header"
+        "scene  scene  scene  scene  scene  scene"
+        "merch  merch  merch  merch  merch  merch";
 }
 
 
@@ -59,7 +72,9 @@ body {
 
 .header h1 {
     font-size: clamp(3rem, 10vw, 7rem);
+
     line-height: 0.9;
+
     letter-spacing: -0.05em;
 }
 
@@ -67,12 +82,13 @@ body {
     margin-top: 10px;
 
     font-size: clamp(0.7rem, 2vw, 1rem);
+
     letter-spacing: 0.2em;
 }
 
 
 /* =========================
-   THREE.JS
+   THREE.JS SCENE
    ========================= */
 
 .scene {
@@ -80,6 +96,7 @@ body {
 
     position: relative;
 
+    min-width: 0;
     min-height: 400px;
 
     z-index: 1;
@@ -94,29 +111,62 @@ body {
 
 
 /* =========================
-   MERCH
+   MERCH GRID
    ========================= */
 
 .merch {
     grid-area: merch;
 
-    position: relative;
-    z-index: 2;
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+
+    grid-template-areas:
+        ". . hoodie hoodie . .";
+
+    justify-items: center;
+    align-items: start;
+
+    padding: 20px 40px 60px;
+}
+
+
+/* =========================
+   PRODUCT
+   ========================= */
+
+.product {
+    grid-area: hoodie;
+
+    width: 100%;
+    max-width: 400px;
 
     display: grid;
     justify-items: center;
 
     text-align: center;
+}
 
-    padding: 20px 20px 50px;
+
+/* =========================
+   PRODUCT IMAGE
+   ========================= */
+
+.product-image {
+    width: 100%;
 }
 
 .product-image img {
     display: block;
 
-    width: min(100%, 400px);
+    width: 100%;
     height: auto;
 }
+
+
+/* =========================
+   PRODUCT DETAILS
+   ========================= */
 
 .product-details {
     display: grid;
@@ -129,15 +179,22 @@ body {
 
 .product-details h2 {
     font-size: 1.2rem;
+
     letter-spacing: 0.08em;
 }
 
 .product-info {
     font-size: 0.75rem;
+
     letter-spacing: 0.2em;
 
     opacity: 0.7;
 }
+
+
+/* =========================
+   BUTTON
+   ========================= */
 
 button {
     margin-top: 12px;
@@ -150,6 +207,7 @@ button {
     border: 1px solid #fff;
 
     font-size: 0.75rem;
+
     letter-spacing: 0.15em;
 
     cursor: pointer;
@@ -170,7 +228,10 @@ button:hover {
     .site-grid {
         grid-template-columns: 1fr;
 
-        grid-template-rows: auto 1fr auto;
+        grid-template-rows:
+            auto
+            minmax(300px, 1fr)
+            auto;
 
         grid-template-areas:
             "header"
@@ -178,12 +239,36 @@ button:hover {
             "merch";
     }
 
+
+    .header {
+        padding-top: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
+    .header p {
+        letter-spacing: 0.15em;
+    }
+
+
     .scene {
         min-height: 300px;
     }
 
-    .header {
-        padding-top: 30px;
+
+    .merch {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "hoodie";
+
+        padding: 20px 20px 50px;
+    }
+
+
+    .product {
+        max-width: 400px;
     }
 
 }

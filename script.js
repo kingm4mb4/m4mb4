@@ -1,5 +1,10 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js';
 
+
+// =========================
+// CANVAS
+// =========================
+
 const canvas = document.querySelector('#three-canvas');
 
 
@@ -89,10 +94,21 @@ function resize() {
     const width = canvas.clientWidth;
     const height = canvas.clientHeight;
 
+    if (width === 0 || height === 0) {
+        return;
+    }
+
     camera.aspect = width / height;
+
     camera.updateProjectionMatrix();
 
-    renderer.setSize(width, height, false);
+    renderer.setSize(
+        width,
+        height,
+        false
+    );
 }
 
 window.addEventListener('resize', resize);
+
+resize();

@@ -6,42 +6,70 @@
 
     <title>M4MB4</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
     <main class="site-grid">
 
+        <!-- =========================
+             HEADER
+             ========================= -->
+
         <header class="header">
             <h1>M4MB4</h1>
             <p>NEW MUSIC. NEW SHOW. NEW ERA.</p>
         </header>
 
+
+        <!-- =========================
+             THREE.JS SCENE
+             ========================= -->
+
         <section class="scene">
             <canvas id="three-canvas"></canvas>
         </section>
 
+
+        <!-- =========================
+             MERCH
+             ========================= -->
+
         <section class="merch">
 
-            <div class="product-image">
-                <img
-                    src="assets/unisex-classic-hoodie-black-front.png"
-                    alt="M4MB4 Black Hoodie"
-                >
-            </div>
+            <article class="product hoodie">
 
-            <div class="product-details">
-                <h2>M4MB4 HOODIE</h2>
-                <p class="product-info">BLACK / WHITE</p>
-                <button>COMING SOON</button>
-            </div>
+                <div class="product-image">
+                    <img
+                        src="./assets/unisex-classic-hoodie-black-front.png"
+                        alt="M4MB4 Black Hoodie"
+                    >
+                </div>
+
+                <div class="product-details">
+                    <h2>M4MB4 HOODIE</h2>
+
+                    <p class="product-info">
+                        BLACK / WHITE
+                    </p>
+
+                    <button type="button">
+                        COMING SOON
+                    </button>
+                </div>
+
+            </article>
 
         </section>
 
     </main>
 
-    <!-- Three.js -->
+
+    <!-- =========================
+         THREE.JS
+         ========================= -->
+
     <script type="module" src="./script.js"></script>
 
 </body>
