@@ -3,32 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>M4MB4</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <main>
+    <main class="site-grid">
 
-        <div class="header">
+        <header class="header">
             <h1>M4MB4</h1>
             <p>NEW MUSIC. NEW SHOW. NEW ERA.</p>
-        </div>
+        </header>
 
-        <div class="merch">
-            <img
-                src="assets/unisex-classic-hoodie-black-front.png"
-                alt="M4MB4 Black Hoodie"
-            >
+        <section class="scene">
+            <canvas id="three-canvas"></canvas>
+        </section>
 
-            <h2>M4MB4 HOODIE</h2>
-            <p class="product-info">BLACK / WHITE</p>
+        <section class="merch">
 
-            <button>COMING SOON</button>
-        </div>
+            <div class="product-image">
+                <img
+                    src="assets/unisex-classic-hoodie-black-front.png"
+                    alt="M4MB4 Black Hoodie"
+                >
+            </div>
+
+            <div class="product-details">
+                <h2>M4MB4 HOODIE</h2>
+                <p class="product-info">BLACK / WHITE</p>
+                <button>COMING SOON</button>
+            </div>
+
+        </section>
 
     </main>
+
+    <!-- Three.js -->
+    <script type="module" src="script.js"></script>
 
 </body>
 </html>
